@@ -1,7 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-// Get GCD
 int gcd(int a, int b) {
     while (b) {
         a %= b;
