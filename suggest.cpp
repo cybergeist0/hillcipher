@@ -10,7 +10,6 @@ int gcd(int a, int b) {
     return a;
 }
 
-// Find determinant mod 26
 int determinantMod26(vector<vector<int>> key) {
     int det = (key[0][0] * key[1][1] - key[0][1] * key[1][0]) % 26;
     if (det < 0) det += 26; // Ensure non-negative determinant
@@ -31,7 +30,6 @@ bool isValidKey(string keyPhrase) {
         { keyPhrase[2] - 'A', keyPhrase[3] - 'A' }
     };
 
-    // Check if determinant is coprime to 26
     return gcd(determinantMod26(key), 26) == 1;
 }
 
@@ -54,7 +52,6 @@ vector<string> findValidKeys(string phrase) {
     return validKeys;
 }
 
-// Main function
 int main() {
     string phrase;
     getline(cin, phrase);
